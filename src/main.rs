@@ -13,7 +13,10 @@ use modbus_device_simulator::{
 use clap::Parser;
 use anyhow::{Result, Context};
 
-use std::net::SocketAddr;
+use std::{
+    fs,
+    net::SocketAddr
+};
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> Result<()> {
@@ -24,7 +27,7 @@ async fn main() -> Result<()> {
 
     println!("Starting Modbus server on: {}", sock_addr);
 
-    let script = args.script;
+    let script = fs::read_to_string(args.script)?;
 
     // Create the virtual device
     let device = Device::new(&script)?;
