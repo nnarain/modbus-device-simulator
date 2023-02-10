@@ -297,6 +297,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "mbsim"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+ "futures",
+ "futures-util",
+ "mlua",
+ "sync_wrapper",
+ "thiserror",
+ "tokio",
+ "tokio-modbus",
+]
+
+[[package]]
 name = "memchr"
 version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -328,21 +343,6 @@ dependencies = [
  "once_cell",
  "pkg-config",
  "rustc-hash",
-]
-
-[[package]]
-name = "modbus-device-simulator"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "clap",
- "futures",
- "futures-util",
- "mlua",
- "sync_wrapper",
- "thiserror",
- "tokio",
- "tokio-modbus",
 ]
 
 [[package]]

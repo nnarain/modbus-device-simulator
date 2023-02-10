@@ -1,5 +1,5 @@
 [package]
-name = "modbus-device-simulator"
+name = "mbsim"
 version = "0.1.0"
 edition = "2021"
 

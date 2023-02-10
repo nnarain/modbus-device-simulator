@@ -5,7 +5,7 @@
 // @date Nov 26 2022
 //
 
-use modbus_device_simulator::{
+use mbsim::{
     cli::Args,
     server,
     device::Device,
