@@ -22,8 +22,6 @@ pub enum DeviceError {
 pub struct Device {
     lua: Lua,
 }
-// FIXME(nnarain): This is probably wrong...
-unsafe impl Send for Device {}
 
 impl Device {
     pub fn new(script: &str) -> Result<Self, DeviceError> {
